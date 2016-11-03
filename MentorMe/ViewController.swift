@@ -14,13 +14,16 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+       
+        let newPost = Post(post: .offer, title: "I can help with math!", user: "Mrs. Smith", description: "I taught calculus for 12 years at the high school level.", timePosted: nil, tags: ["math", "help", "calculus"])
+        
+        print(newPost.toString())
     }
 
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
     }
 }
 
