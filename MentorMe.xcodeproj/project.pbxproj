@@ -13,6 +13,7 @@
 		276B2FBE1DCBA81200CC1F8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276B2FBD1DCBA81200CC1F8B /* Assets.xcassets */; };
 		276B2FC11DCBA81200CC1F8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276B2FBF1DCBA81200CC1F8B /* LaunchScreen.storyboard */; };
 		276B2FC91DCBA83600CC1F8B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276B2FC81DCBA83600CC1F8B /* Post.swift */; };
+		72E716BF9BAD7BA4E131E34B /* Pods_MentorMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B025F93F1FA84A36793E9B /* Pods_MentorMe.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		276B2FC01DCBA81200CC1F8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		276B2FC21DCBA81200CC1F8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		276B2FC81DCBA83600CC1F8B /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Model/Post.swift; sourceTree = "<group>"; };
+		4D0ADDD511F4D28787030B17 /* Pods-MentorMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentorMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MentorMe/Pods-MentorMe.debug.xcconfig"; sourceTree = "<group>"; };
+		88B025F93F1FA84A36793E9B /* Pods_MentorMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MentorMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		900C7364CB3B1C09C59BD3A0 /* Pods-MentorMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentorMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-MentorMe/Pods-MentorMe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72E716BF9BAD7BA4E131E34B /* Pods_MentorMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				276B2FB51DCBA81200CC1F8B /* MentorMe */,
 				276B2FB41DCBA81200CC1F8B /* Products */,
+				E17B24E02B48BFB5FEA89D1E /* Pods */,
+				C77CA79EEC923B9087CC3000 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +82,23 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		C77CA79EEC923B9087CC3000 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88B025F93F1FA84A36793E9B /* Pods_MentorMe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E17B24E02B48BFB5FEA89D1E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D0ADDD511F4D28787030B17 /* Pods-MentorMe.debug.xcconfig */,
+				900C7364CB3B1C09C59BD3A0 /* Pods-MentorMe.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +106,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 276B2FC51DCBA81200CC1F8B /* Build configuration list for PBXNativeTarget "MentorMe" */;
 			buildPhases = (
+				F164441D73A99CCAAA7E2975 /* [CP] Check Pods Manifest.lock */,
 				276B2FAF1DCBA81200CC1F8B /* Sources */,
 				276B2FB01DCBA81200CC1F8B /* Frameworks */,
 				276B2FB11DCBA81200CC1F8B /* Resources */,
+				9559C7B720530D000A7858E5 /* [CP] Embed Pods Frameworks */,
+				258DF5DF18BE97C411D99DFA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -141,6 +168,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		258DF5DF18BE97C411D99DFA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MentorMe/Pods-MentorMe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9559C7B720530D000A7858E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MentorMe/Pods-MentorMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F164441D73A99CCAAA7E2975 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		276B2FAF1DCBA81200CC1F8B /* Sources */ = {
@@ -268,6 +343,7 @@
 		};
 		276B2FC61DCBA81200CC1F8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0ADDD511F4D28787030B17 /* Pods-MentorMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MentorMe/Info.plist;
@@ -280,6 +356,7 @@
 		};
 		276B2FC71DCBA81200CC1F8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 900C7364CB3B1C09C59BD3A0 /* Pods-MentorMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MentorMe/Info.plist;
@@ -309,6 +386,7 @@
 				276B2FC71DCBA81200CC1F8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
