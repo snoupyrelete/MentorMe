@@ -16,9 +16,9 @@ class Post
     let description: String?
     let user: String
     let date: Date
-    let tags: [String?]
+    let tags: String?
    
-    init(post: PostType, title: String, user: String, description: String?, tags: [String?])
+    init(post: PostType, title: String, user: String, description: String?, tags: String?)
     {
         
         self.post = post
@@ -37,10 +37,23 @@ class Post
     
     func toAny() -> NSDictionary
     {
+        let tagsList = getSeperatedTags()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yy h:mm a Z"
         let formattedDate = dateFormatter.string(from: self.date)
         
-        return ["title":self.title, "description":self.description!, "user": self.user, "date": formattedDate] as NSDictionary
+        return ["postType":String(describing: self.post),"title":self.title, "description":self.description!, "user": self.user, "date": formattedDate, "tags": tagsList] as NSDictionary
+    }
+    
+    func getSeperatedTags() -> NSArray
+    {
+        var seperatedTags: [String]
+        
+        let currentTags = self.tags
+        seperatedTags = currentTags!.characters.split(separator: ",")
+            .map(String.init)
+
+        return seperatedTags as NSArray
+        
     }
 }

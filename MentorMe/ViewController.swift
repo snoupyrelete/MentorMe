@@ -15,7 +15,7 @@ class ViewController: UIViewController
     let postType = PostType.offer
     var postTitle: String = ""
     var postDesc: String = ""
-    var postTags: [String] = []
+    var postTags: String = ""
     
     
     
