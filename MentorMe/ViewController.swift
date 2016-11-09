@@ -38,7 +38,7 @@ class ViewController: UIViewController
     
     @IBAction func tagsDidInput(_ sender: AnyObject)
     {
-        postTags.append(tagsInput.text!)
+        postTags = tagsInput.text!
         print(postTags)
     }
     
@@ -60,11 +60,6 @@ class ViewController: UIViewController
       
         super.viewDidLoad()
         baseDatabaseRef = FIRDatabase.database().reference().child("post-items")
-
-        
-  //      let newPost = Post(post: postType, title: postTitle, user: postUser, description: postDesc, timePosted: nil, tags: [postTags])
-        
-    //    print(newPost.toString())
     }
 
     override func didReceiveMemoryWarning()

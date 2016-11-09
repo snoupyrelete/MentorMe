@@ -38,6 +38,7 @@ class Post
     func toAny() -> NSDictionary
     {
         let tagsList = getSeperatedTags()
+      
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yy h:mm a Z"
         let formattedDate = dateFormatter.string(from: self.date)
@@ -49,10 +50,12 @@ class Post
     {
         var seperatedTags: [String]
         
-        let currentTags = self.tags
+        let currentTags = self.tags?.replacingOccurrences(of: " ", with: "")
         seperatedTags = currentTags!.characters.split(separator: ",")
             .map(String.init)
 
+        print("TAGS PRINTING WEIRD ON CONSOLE TEST: \(currentTags)")
+       // print(seperatedTags)
         return seperatedTags as NSArray
         
     }
