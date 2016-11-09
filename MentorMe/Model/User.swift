@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import FirebaseAuth
 
-class User
+struct User
 {
     let username: String
     let password: String

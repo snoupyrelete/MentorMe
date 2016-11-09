@@ -44,8 +44,9 @@ class ViewController: UIViewController
     
     @IBAction func postButton(_ sender: AnyObject)
     {
-        let newPost = Post(post: postType, title: postTitle, user: "drob8896", description: postDesc, timePosted: nil, tags: postTags)
+        let newPost = Post(post: postType, title: postTitle as NSString, user: "drob8896", description: postDesc, timePosted: nil, tags: postTags)
         print(newPost.toString())
+        baseDatabaseRef.setValue(newPost.toAny())
     }
     
     var baseDatabaseRef: FIRDatabaseReference!
@@ -55,21 +56,10 @@ class ViewController: UIViewController
     {
         
         super.viewDidLoad()
-        
-        
-    
-     
-        
-        //let postDesc = descInput.text
-       // let postUser = userInput.text
-        //let postTags = tagsInput.text
-            
-        
-        
-        
-        
+
         baseDatabaseRef = FIRDatabase.database().reference().child("post-items")
 
+        
   //      let newPost = Post(post: postType, title: postTitle, user: postUser, description: postDesc, timePosted: nil, tags: [postTags])
         
     //    print(newPost.toString())
