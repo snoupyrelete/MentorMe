@@ -44,8 +44,8 @@ class ViewController: UIViewController
     
     @IBAction func postButton(_ sender: AnyObject)
     {
-        let newPost = Post(post: postType, title: postTitle as NSString, user: "drob8896", description: postDesc, timePosted: nil, tags: postTags)
-        print(newPost.toString())
+        let newPost = Post(post: postType, title: postTitle as NSString, user: "drob8896", description: postDesc, tags: postTags)
+        //print(newPost.toString())
         baseDatabaseRef.setValue(newPost.toAny())
     }
     
@@ -54,9 +54,8 @@ class ViewController: UIViewController
     
     override func viewDidLoad()
     {
-        
+      
         super.viewDidLoad()
-
         baseDatabaseRef = FIRDatabase.database().reference().child("post-items")
 
         
