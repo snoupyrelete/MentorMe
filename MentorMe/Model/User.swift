@@ -7,3 +7,19 @@
 //
 
 import Foundation
+
+class User
+{
+    let username: String
+    let password: String
+    let friendsList: [User]
+    let mentorScore: Int
+    
+    init()
+    {
+        username = "UNKOWN"
+        password = "PASSWORD"
+        friendsList = [User]()
+        mentorScore = 0
+    }
+}
