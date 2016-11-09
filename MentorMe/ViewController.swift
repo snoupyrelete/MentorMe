@@ -45,8 +45,11 @@ class ViewController: UIViewController
     @IBAction func postButton(_ sender: AnyObject)
     {
         let newPost = Post(post: postType, title: postTitle, user: "drob8896", description: postDesc, tags: postTags)
-        //print(newPost.toString())
-        baseDatabaseRef.setValue(newPost.toAny())
+       
+        let postRef = self.baseDatabaseRef.childByAutoId()
+        
+        postRef.setValue(newPost.toAny())
+
     }
     
     var baseDatabaseRef: FIRDatabaseReference!
