@@ -12,7 +12,7 @@ import FirebaseDatabase
 class ViewController: UIViewController
 {
     
-    let postType = Post.PostType.offer
+    let postType = PostType.offer
     var postTitle: String = ""
     var postDesc: String = ""
     var postTags: [String] = []
@@ -44,7 +44,7 @@ class ViewController: UIViewController
     
     @IBAction func postButton(_ sender: AnyObject)
     {
-        let newPost = Post(post: postType, title: postTitle as NSString, user: "drob8896", description: postDesc, tags: postTags)
+        let newPost = Post(post: postType, title: postTitle, user: "drob8896", description: postDesc, tags: postTags)
         //print(newPost.toString())
         baseDatabaseRef.setValue(newPost.toAny())
     }

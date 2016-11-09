@@ -10,20 +10,15 @@ import Foundation
 
 class Post
 {
-    enum PostType
-    {
-        case request
-        case offer
-    }
-    
+
     let post: PostType
-    let title: NSString?
+    let title: String
     let description: String?
     let user: String
     let date: Date
     let tags: [String?]
    
-    init(post: PostType, title: NSString, user: String, description: String?, tags: [String?])
+    init(post: PostType, title: String, user: String, description: String?, tags: [String?])
     {
         
         self.post = post
@@ -42,6 +37,10 @@ class Post
     
     func toAny() -> NSDictionary
     {
-        return ["title":self.title!] as NSDictionary
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yy h:mm a Z"
+        let formattedDate = dateFormatter.string(from: self.date)
+        
+        return ["title":self.title, "description":self.description!, "user": self.user, "date": formattedDate] as NSDictionary
     }
 }
