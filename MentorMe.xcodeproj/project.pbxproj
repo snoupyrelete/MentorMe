@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		271F9D101DD2C2F8009188E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 271F9D0F1DD2C2F8009188E5 /* GoogleService-Info.plist */; };
+		271F9D121DD2DF4F009188E5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271F9D111DD2DF4F009188E5 /* User.swift */; };
 		276B2FB71DCBA81200CC1F8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276B2FB61DCBA81200CC1F8B /* AppDelegate.swift */; };
 		276B2FB91DCBA81200CC1F8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276B2FB81DCBA81200CC1F8B /* ViewController.swift */; };
 		276B2FBC1DCBA81200CC1F8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276B2FBA1DCBA81200CC1F8B /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		271F9D0F1DD2C2F8009188E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		271F9D111DD2DF4F009188E5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 		276B2FB31DCBA81200CC1F8B /* MentorMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentorMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		276B2FB61DCBA81200CC1F8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		276B2FB81DCBA81200CC1F8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 				276B2FBD1DCBA81200CC1F8B /* Assets.xcassets */,
 				276B2FBF1DCBA81200CC1F8B /* LaunchScreen.storyboard */,
 				276B2FC21DCBA81200CC1F8B /* Info.plist */,
+				271F9D0F1DD2C2F8009188E5 /* GoogleService-Info.plist */,
 				276B2FCA1DCBA83A00CC1F8B /* Model */,
 			);
 			path = MentorMe;
@@ -78,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				276B2FC81DCBA83600CC1F8B /* Post.swift */,
+				271F9D111DD2DF4F009188E5 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -162,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				276B2FC11DCBA81200CC1F8B /* LaunchScreen.storyboard in Resources */,
+				271F9D101DD2C2F8009188E5 /* GoogleService-Info.plist in Resources */,
 				276B2FBE1DCBA81200CC1F8B /* Assets.xcassets in Resources */,
 				276B2FBC1DCBA81200CC1F8B /* Main.storyboard in Resources */,
 			);
@@ -222,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271F9D121DD2DF4F009188E5 /* User.swift in Sources */,
 				276B2FC91DCBA83600CC1F8B /* Post.swift in Sources */,
 				276B2FB91DCBA81200CC1F8B /* ViewController.swift in Sources */,
 				276B2FB71DCBA81200CC1F8B /* AppDelegate.swift in Sources */,

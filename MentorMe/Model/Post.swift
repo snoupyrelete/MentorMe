@@ -17,7 +17,7 @@ class Post
     }
     
     let post: PostType
-    let title: String
+    let title: String?
     let description: String?
     let user: String
     let timePosted: Date?
@@ -35,7 +35,6 @@ class Post
     
     func toString() -> String
     {
-        
         let postDesc = "The post is of \(self.post) type, titled: \(self.title), with the description: \(self.description), posted by the user: \(self.user), on the date/time: \(self.timePosted). It is tagged as: \(self.tags)"
         return postDesc
     }

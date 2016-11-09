@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Profile-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MentorMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,11 +19,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="rb3-Wf-J0V"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="rb3-Wf-J0V"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="5"/>
+            <point key="canvasLocation" x="1225" y="-1"/>
+        </scene>
+        <!--Messages-->
+        <scene sceneID="wiR-lR-7L2">
+            <objects>
+                <viewController id="oU2-kb-yEJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Fw-eR-dp3"/>
+                        <viewControllerLayoutGuide type="bottom" id="xRg-PH-A5N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A8A-8e-kgh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Messages" id="oTb-UO-Fo3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R2z-24-mD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2036" y="50"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Hhk-zC-UfJ">
@@ -31,6 +50,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="0qc-8u-vl9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" itemPositioning="fill" id="38L-Zk-Qj3">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -39,13 +59,14 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="8mi-8T-BXL"/>
                         <segue destination="iww-OP-Akl" kind="relationship" relationship="viewControllers" id="Cda-Cg-az8"/>
                         <segue destination="goY-zD-5d2" kind="relationship" relationship="viewControllers" id="6yI-iG-XGa"/>
+                        <segue destination="oU2-kb-yEJ" kind="relationship" relationship="viewControllers" id="e7D-0P-RNi"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Plc-fA-IaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="129.98500749625188"/>
         </scene>
-        <!--View Controller-->
+        <!--Feed-->
         <scene sceneID="oYw-jo-fZr">
             <objects>
                 <viewController id="iww-OP-Akl" customClass="ViewController" customModule="MentorMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -67,13 +88,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="pJn-wc-jIE"/>
+                    <tabBarItem key="tabBarItem" title="Feed" id="pJn-wc-jIE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oww-3n-A3g" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="815"/>
+            <point key="canvasLocation" x="2762" y="-146"/>
         </scene>
-        <!--View Controller-->
+        <!--Post-->
         <scene sceneID="OhO-b6-j9q">
             <objects>
                 <viewController id="goY-zD-5d2" customClass="ViewController" customModule="MentorMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -84,13 +105,94 @@
                     <view key="view" contentMode="scaleToFill" id="r8A-25-sfv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDK-GJ-xrX">
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                <state key="normal" title="POST">
+                                    <color key="titleColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="postButton:" destination="goY-zD-5d2" eventType="touchUpInside" id="bQb-Ac-S82"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IbP-ht-KJT">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="JeF-ov-99r"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="titleDidInput:" destination="goY-zD-5d2" eventType="editingDidEnd" id="EsW-Io-Zm1"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2bD-vk-ZbU">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="descDidInput:" destination="goY-zD-5d2" eventType="editingDidEnd" id="ohm-vf-gg5"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="[tags]" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DBK-Ft-mX3">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="tagsDidInput:" destination="goY-zD-5d2" eventType="editingDidEnd" id="ahi-vU-M0t"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hCn-qA-UuL">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MJV-sx-DgC">
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <segments>
+                                    <segment title="Offer"/>
+                                    <segment title="Request"/>
+                                </segments>
+                                <connections>
+                                    <action selector="postType:" destination="goY-zD-5d2" eventType="valueChanged" id="k2K-7X-EZX"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.15101002156734467" green="0.56891876459121704" blue="0.43715286254882812" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2bD-vk-ZbU" firstAttribute="top" secondItem="IbP-ht-KJT" secondAttribute="bottom" constant="20" id="62t-E5-zQj"/>
+                            <constraint firstItem="DBK-Ft-mX3" firstAttribute="top" secondItem="hCn-qA-UuL" secondAttribute="bottom" constant="20" id="84F-Av-zJw"/>
+                            <constraint firstItem="IbP-ht-KJT" firstAttribute="top" secondItem="Dpw-o9-WY5" secondAttribute="bottom" constant="36" id="E4h-W2-LZy"/>
+                            <constraint firstItem="hCn-qA-UuL" firstAttribute="width" secondItem="IbP-ht-KJT" secondAttribute="width" id="Hka-yZ-Zvl"/>
+                            <constraint firstItem="2bD-vk-ZbU" firstAttribute="width" secondItem="IbP-ht-KJT" secondAttribute="width" id="M8T-o6-le2"/>
+                            <constraint firstItem="DBK-Ft-mX3" firstAttribute="centerX" secondItem="r8A-25-sfv" secondAttribute="centerX" id="Pre-OG-uNf"/>
+                            <constraint firstItem="DDK-GJ-xrX" firstAttribute="top" secondItem="DBK-Ft-mX3" secondAttribute="bottom" constant="20" id="XAY-a5-gef"/>
+                            <constraint firstItem="hCn-qA-UuL" firstAttribute="top" secondItem="2bD-vk-ZbU" secondAttribute="bottom" constant="20" id="Yyr-vR-fmV"/>
+                            <constraint firstItem="MJV-sx-DgC" firstAttribute="centerX" secondItem="r8A-25-sfv" secondAttribute="centerX" id="aQI-Hu-GmI"/>
+                            <constraint firstItem="2bD-vk-ZbU" firstAttribute="centerX" secondItem="r8A-25-sfv" secondAttribute="centerX" id="b4y-9V-sfM"/>
+                            <constraint firstItem="hCn-qA-UuL" firstAttribute="centerX" secondItem="r8A-25-sfv" secondAttribute="centerX" id="bqE-FI-ovA"/>
+                            <constraint firstItem="MJV-sx-DgC" firstAttribute="top" secondItem="Dpw-o9-WY5" secondAttribute="bottom" constant="-12" id="ci0-UU-TiL"/>
+                            <constraint firstItem="DDK-GJ-xrX" firstAttribute="centerX" secondItem="r8A-25-sfv" secondAttribute="centerX" id="kxq-CN-rkU"/>
+                            <constraint firstItem="IbP-ht-KJT" firstAttribute="centerX" secondItem="r8A-25-sfv" secondAttribute="centerX" id="o1a-ed-hbm"/>
+                            <constraint firstItem="DBK-Ft-mX3" firstAttribute="width" secondItem="IbP-ht-KJT" secondAttribute="width" id="v7E-Du-etI"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="MJV-sx-DgC"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="history" id="bLg-iG-FYu"/>
+                    <tabBarItem key="tabBarItem" title="Post" id="bLg-iG-FYu"/>
+                    <connections>
+                        <outlet property="descInput" destination="2bD-vk-ZbU" id="kim-JW-MOG"/>
+                        <outlet property="tagsInput" destination="DBK-Ft-mX3" id="MOm-C1-ouy"/>
+                        <outlet property="titleInput" destination="IbP-ht-KJT" id="p0P-H8-Smq"/>
+                        <outlet property="userInput" destination="hCn-qA-UuL" id="a8U-rF-lNz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jg-Fs-y5s" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="-850"/>
+            <point key="canvasLocation" x="1036" y="-850.52473763118451"/>
         </scene>
     </scenes>
 </document>
