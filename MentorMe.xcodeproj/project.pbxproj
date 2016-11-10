@@ -16,6 +16,7 @@
 		276B2FC11DCBA81200CC1F8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276B2FBF1DCBA81200CC1F8B /* LaunchScreen.storyboard */; };
 		276B2FC91DCBA83600CC1F8B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276B2FC81DCBA83600CC1F8B /* Post.swift */; };
 		27D594AB1DD3B40000A5C3CE /* PostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D594AA1DD3B40000A5C3CE /* PostType.swift */; };
+		27D594AD1DD4146D00A5C3CE /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D594AC1DD4146D00A5C3CE /* PostsTableViewController.swift */; };
 		72E716BF9BAD7BA4E131E34B /* Pods_MentorMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B025F93F1FA84A36793E9B /* Pods_MentorMe.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		276B2FC21DCBA81200CC1F8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		276B2FC81DCBA83600CC1F8B /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Model/Post.swift; sourceTree = "<group>"; };
 		27D594AA1DD3B40000A5C3CE /* PostType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostType.swift; path = Model/PostType.swift; sourceTree = "<group>"; };
+		27D594AC1DD4146D00A5C3CE /* PostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostsTableViewController.swift; path = Controller/PostsTableViewController.swift; sourceTree = "<group>"; };
 		4D0ADDD511F4D28787030B17 /* Pods-MentorMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentorMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MentorMe/Pods-MentorMe.debug.xcconfig"; sourceTree = "<group>"; };
 		88B025F93F1FA84A36793E9B /* Pods_MentorMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MentorMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		900C7364CB3B1C09C59BD3A0 /* Pods-MentorMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentorMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-MentorMe/Pods-MentorMe.release.xcconfig"; sourceTree = "<group>"; };
@@ -70,12 +72,12 @@
 			isa = PBXGroup;
 			children = (
 				276B2FB61DCBA81200CC1F8B /* AppDelegate.swift */,
-				276B2FB81DCBA81200CC1F8B /* ViewController.swift */,
 				276B2FBA1DCBA81200CC1F8B /* Main.storyboard */,
 				276B2FBD1DCBA81200CC1F8B /* Assets.xcassets */,
 				276B2FBF1DCBA81200CC1F8B /* LaunchScreen.storyboard */,
 				276B2FC21DCBA81200CC1F8B /* Info.plist */,
 				271F9D0F1DD2C2F8009188E5 /* GoogleService-Info.plist */,
+				27D594AE1DD4149A00A5C3CE /* Controller */,
 				276B2FCA1DCBA83A00CC1F8B /* Model */,
 			);
 			path = MentorMe;
@@ -89,6 +91,15 @@
 				27D594AA1DD3B40000A5C3CE /* PostType.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		27D594AE1DD4149A00A5C3CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				276B2FB81DCBA81200CC1F8B /* ViewController.swift */,
+				27D594AC1DD4146D00A5C3CE /* PostsTableViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		C77CA79EEC923B9087CC3000 /* Frameworks */ = {
@@ -233,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				271F9D121DD2DF4F009188E5 /* User.swift in Sources */,
+				27D594AD1DD4146D00A5C3CE /* PostsTableViewController.swift in Sources */,
 				276B2FC91DCBA83600CC1F8B /* Post.swift in Sources */,
 				276B2FB91DCBA81200CC1F8B /* ViewController.swift in Sources */,
 				27D594AB1DD3B40000A5C3CE /* PostType.swift in Sources */,
