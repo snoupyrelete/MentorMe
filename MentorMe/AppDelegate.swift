@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FIRApp.configure()
         let rootViewController = self.window?.rootViewController as! UITabBarController!
         let tabItem = rootViewController?.tabBar.items![3]
+        tabItem?.badgeColor = UIColor.green
         tabItem!.badgeValue = "3"
         
         return true

@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Profile-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MentorMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ProfileViewController" customModule="MentorMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,13 +18,47 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULp-nz-pls">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIk-87-HHP">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="qdG-fP-QQW"/>
+                                </constraints>
+                                <state key="normal" title="Message"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4J-sp-OGf">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="i4J-sp-OGf" firstAttribute="top" secondItem="dIk-87-HHP" secondAttribute="bottom" constant="47" id="4Ek-4W-DQf"/>
+                            <constraint firstItem="i4J-sp-OGf" firstAttribute="top" secondItem="ULp-nz-pls" secondAttribute="bottom" constant="36" id="Agb-X5-4fq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dIk-87-HHP" secondAttribute="trailing" constant="7" id="O6s-H0-BwJ"/>
+                            <constraint firstItem="dIk-87-HHP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="OhP-23-S6m"/>
+                            <constraint firstItem="ULp-nz-pls" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="bSb-eE-PzP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="i4J-sp-OGf" secondAttribute="bottom" constant="276" id="cJY-Vi-LnW"/>
+                            <constraint firstItem="dIk-87-HHP" firstAttribute="leading" secondItem="ULp-nz-pls" secondAttribute="trailing" constant="33" id="jVX-50-Ffg"/>
+                            <constraint firstItem="ULp-nz-pls" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="29" id="nJT-BB-g7R"/>
+                            <constraint firstItem="ULp-nz-pls" firstAttribute="leading" secondItem="i4J-sp-OGf" secondAttribute="leading" id="tl4-xc-YV7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="i4J-sp-OGf" secondAttribute="trailing" constant="15" id="xXL-qG-n2B"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="rb3-Wf-J0V"/>
+                    <connections>
+                        <outlet property="bioLabel" destination="i4J-sp-OGf" id="ebv-aq-CXE"/>
+                        <outlet property="usernameLabel" destination="ULp-nz-pls" id="v5H-fa-JbO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1225" y="-1"/>
+            <point key="canvasLocation" x="1159.2" y="555.47226386806597"/>
         </scene>
         <!--Messages-->
         <scene sceneID="wiR-lR-7L2">

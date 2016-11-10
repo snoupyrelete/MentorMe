@@ -44,7 +44,7 @@ class ViewController: UIViewController
     
     @IBAction func postButton(_ sender: AnyObject)
     {
-        let newPost = Post(post: postType, title: postTitle, user: "drob8896", description: postDesc, tags: postTags)
+        let newPost = Post(post: postType, title: postTitle, user: "drob8896", description: postDesc, category: "General", tags: postTags)
        
         let postRef = self.baseDatabaseRef.childByAutoId()
         

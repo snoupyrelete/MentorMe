@@ -17,6 +17,8 @@
 		276B2FC91DCBA83600CC1F8B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276B2FC81DCBA83600CC1F8B /* Post.swift */; };
 		27D594AB1DD3B40000A5C3CE /* PostType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D594AA1DD3B40000A5C3CE /* PostType.swift */; };
 		27D594AD1DD4146D00A5C3CE /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D594AC1DD4146D00A5C3CE /* PostsTableViewController.swift */; };
+		27D594B01DD4E59900A5C3CE /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D594AF1DD4E59900A5C3CE /* Profile.swift */; };
+		27D594B21DD4E92D00A5C3CE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D594B11DD4E92D00A5C3CE /* ProfileViewController.swift */; };
 		72E716BF9BAD7BA4E131E34B /* Pods_MentorMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B025F93F1FA84A36793E9B /* Pods_MentorMe.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +27,7 @@
 		271F9D111DD2DF4F009188E5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 		276B2FB31DCBA81200CC1F8B /* MentorMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentorMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		276B2FB61DCBA81200CC1F8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		276B2FB81DCBA81200CC1F8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		276B2FB81DCBA81200CC1F8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controller/ViewController.swift; sourceTree = "<group>"; };
 		276B2FBB1DCBA81200CC1F8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		276B2FBD1DCBA81200CC1F8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		276B2FC01DCBA81200CC1F8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -33,6 +35,8 @@
 		276B2FC81DCBA83600CC1F8B /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Model/Post.swift; sourceTree = "<group>"; };
 		27D594AA1DD3B40000A5C3CE /* PostType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostType.swift; path = Model/PostType.swift; sourceTree = "<group>"; };
 		27D594AC1DD4146D00A5C3CE /* PostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostsTableViewController.swift; path = Controller/PostsTableViewController.swift; sourceTree = "<group>"; };
+		27D594AF1DD4E59900A5C3CE /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Profile.swift; path = Model/Profile.swift; sourceTree = "<group>"; };
+		27D594B11DD4E92D00A5C3CE /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controller/ProfileViewController.swift; sourceTree = "<group>"; };
 		4D0ADDD511F4D28787030B17 /* Pods-MentorMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentorMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MentorMe/Pods-MentorMe.debug.xcconfig"; sourceTree = "<group>"; };
 		88B025F93F1FA84A36793E9B /* Pods_MentorMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MentorMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		900C7364CB3B1C09C59BD3A0 /* Pods-MentorMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentorMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-MentorMe/Pods-MentorMe.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 				276B2FC81DCBA83600CC1F8B /* Post.swift */,
 				271F9D111DD2DF4F009188E5 /* User.swift */,
 				27D594AA1DD3B40000A5C3CE /* PostType.swift */,
+				27D594AF1DD4E59900A5C3CE /* Profile.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -98,6 +103,7 @@
 			children = (
 				276B2FB81DCBA81200CC1F8B /* ViewController.swift */,
 				27D594AC1DD4146D00A5C3CE /* PostsTableViewController.swift */,
+				27D594B11DD4E92D00A5C3CE /* ProfileViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -246,8 +252,10 @@
 				271F9D121DD2DF4F009188E5 /* User.swift in Sources */,
 				27D594AD1DD4146D00A5C3CE /* PostsTableViewController.swift in Sources */,
 				276B2FC91DCBA83600CC1F8B /* Post.swift in Sources */,
+				27D594B01DD4E59900A5C3CE /* Profile.swift in Sources */,
 				276B2FB91DCBA81200CC1F8B /* ViewController.swift in Sources */,
 				27D594AB1DD3B40000A5C3CE /* PostType.swift in Sources */,
+				27D594B21DD4E92D00A5C3CE /* ProfileViewController.swift in Sources */,
 				276B2FB71DCBA81200CC1F8B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

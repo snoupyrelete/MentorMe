@@ -11,14 +11,23 @@ import FirebaseAuth
 
 struct User
 {
-    let username: String
+    public let username: String
     let password: String
     let friendsList: [User]
     let mentorScore: Int
     
+    
     init()
     {
         username = "UNKOWN"
+        password = "PASSWORD"
+        friendsList = [User]()
+        mentorScore = 0
+
+    }
+    init(username: String)
+    {
+        self.username = username
         password = "PASSWORD"
         friendsList = [User]()
         mentorScore = 0
