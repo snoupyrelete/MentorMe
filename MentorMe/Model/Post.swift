@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
 class Post
 {
@@ -19,7 +20,11 @@ class Post
     let category: String
     let tags: String?
     
-    init(post: PostType, title: String, user: String, description: String?, category: String, tags: String?)
+   // let key:String!
+    //let itemRef:FIRDatabaseReference?
+
+    
+    init(post: PostType, title: String, user: String, description: String?, category: String = "General", tags: String? = "")
     {
         
         self.post = post
@@ -31,6 +36,26 @@ class Post
         self.tags = tags
         
     }
+    
+    init (snapshot:FIRDataSnapshot)
+    {
+        //key = snapshot.key
+        //itemRef = snapshot.ref
+        let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+        
+        
+       // self.post = postDict["post"]
+        self.post = .offer
+        self.title = postDict["title"] as! String
+        self.description = postDict["description"] as? String
+        self.user = postDict["user"] as! String
+        //self.date = postDict["date"] as! Date
+        self.date = Date()
+        self.category = postDict["category"] as! String
+        self.tags = postDict["tags"] as? String
+    }
+        
+
     
     func toString() -> String
     {
@@ -59,4 +84,5 @@ class Post
         return seperatedTags as NSArray
         
     }
+
 }

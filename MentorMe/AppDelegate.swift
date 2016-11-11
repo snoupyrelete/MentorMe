@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FIRApp.configure()
         let rootViewController = self.window?.rootViewController as! UITabBarController!
-        let tabItem = rootViewController?.tabBar.items![3]
+        let tabItem = rootViewController?.tabBar.items![0]
         tabItem?.badgeColor = UIColor.green
         tabItem!.badgeValue = "3"
         

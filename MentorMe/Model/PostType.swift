@@ -12,4 +12,11 @@ enum PostType
 {
     case request
     case offer
+    case general
+    
+}
+
+func toString() -> String
+{
+    return String(describing: PostType.self)
 }

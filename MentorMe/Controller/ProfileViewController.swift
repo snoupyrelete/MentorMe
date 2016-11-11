@@ -18,5 +18,6 @@ class ProfileViewController: UIViewController
     {
         let x = Profile()
         bioLabel.text = x.bio
+        
     }
 }
