@@ -1,5 +1,5 @@
 //
-//  FilterViewController.swift
+//  CategoryCell.swift
 //  MentorMe
 //
 //  Created by Dylan Robson on 11/11/16.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class FilterViewController: UIViewController
+class CategoryCell: UICollectionViewCell
 {
-    
+    @IBOutlet weak var categoryLabel: UILabel!
 }

@@ -12,39 +12,81 @@ import FirebaseDatabase
 
 class PostsTableViewController: UITableViewController
 {
-    @IBAction func filterButtonPressed(_ sender: AnyObject)
+    @IBAction func sortSegmentClicked(_ sender: AnyObject)
     {
- 
+        let cell = tableView.visibleCells.first as! SortCell
+    
+        switch cell.sortSegment.selectedSegmentIndex
+        {
+        case 0:
+            print("Offer")
+            sortPosts(sortBy: .offer)
+        case 1:
+            print("Request")
+            sortPosts(sortBy: .request)
+        case 2:
+            print("Informational")
+            sortPosts(sortBy: .informational)
+        default:
+            break;
+        }
     }
+
+    
     lazy var baseDatabaseRef: FIRDatabaseReference! = FIRDatabase.database().reference().child("post-items")
     var posts = [Post]()
     var categoryFilter: String = "General"
-    
     override func viewDidLoad()
     {
+        tableView.rowHeight = UITableViewAutomaticDimension;
+        tableView.estimatedRowHeight = 44.0;
+        
         self.title = "FEED"
+  
         observeDB()
        
     }
+    
     override func numberOfSections(in tableView: UITableView) -> Int
     {
-        return 1
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return posts.count
+        if section == 0
+        {
+            return 1
+        }
+        else
+        {
+            return posts.count
+
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let post = posts[indexPath.row]
+        if indexPath.section == 0
+        {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SortCell", for: indexPath) as! SortCell
+            
+            return cell
+        }
+        else
+        {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+            let post = posts[indexPath.row]
+            cell.textLabel?.text = post.title
+            cell.detailTextLabel?.text = post.category
+            //cell.layer.frame.size.height = 100
+            return cell
+
+        }
+       
         
-        cell.textLabel?.text = post.title
-        cell.detailTextLabel?.text = post.category
         
-        return cell
+      //  return cell
     }
     
     func observeDB()
@@ -70,6 +112,22 @@ class PostsTableViewController: UITableViewController
             print("MY CUSTOM ERROR: \(error.localizedDescription)")
         }
 
+    }
+    
+    func sortPosts(sortBy: PostType)
+    {
+        var sortedPosts = [Post]()
+        for post in self.posts
+        {
+            if post.post == sortBy
+            {
+                sortedPosts.append(post)
+                print("sortedPOSTS: \(sortedPosts)")
+            }
+        }
+        self.posts = sortedPosts
+        self.tableView.reloadData()
+        //return sortedPosts
     }
 
 }

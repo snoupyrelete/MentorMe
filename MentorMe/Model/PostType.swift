@@ -12,7 +12,7 @@ enum PostType
 {
     case request
     case offer
-    case general
+    case informational
     
 }
 
