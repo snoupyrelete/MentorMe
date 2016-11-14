@@ -20,13 +20,13 @@ class PostsTableViewController: UITableViewController
         {
         case 0:
             print("Offer")
-            sortPosts(sortBy: .offer)
+            observeDB(sortedBy: .offer)
         case 1:
             print("Request")
-            sortPosts(sortBy: .request)
+            observeDB(sortedBy: .request)
         case 2:
             print("Informational")
-            sortPosts(sortBy: .informational)
+            observeDB(sortedBy: .informational)
         default:
             break;
         }
@@ -35,6 +35,7 @@ class PostsTableViewController: UITableViewController
     
     lazy var baseDatabaseRef: FIRDatabaseReference! = FIRDatabase.database().reference().child("post-items")
     var posts = [Post]()
+    
     var categoryFilter: String = "General"
     override func viewDidLoad()
     {
@@ -43,7 +44,7 @@ class PostsTableViewController: UITableViewController
         
         self.title = "FEED"
   
-        observeDB()
+        observeDB(sortedBy: .offer)
        
     }
     
@@ -79,7 +80,6 @@ class PostsTableViewController: UITableViewController
             let post = posts[indexPath.row]
             cell.textLabel?.text = post.title
             cell.detailTextLabel?.text = post.category
-            //cell.layer.frame.size.height = 100
             return cell
 
         }
@@ -89,7 +89,7 @@ class PostsTableViewController: UITableViewController
       //  return cell
     }
     
-    func observeDB()
+    func observeDB(sortedBy: PostType)
     {
         print("start of OBSERVE DB")
         
@@ -100,12 +100,15 @@ class PostsTableViewController: UITableViewController
             
             for post in snapshot.children {
                 let postObject = Post(snapshot: post as! FIRDataSnapshot)
-                newPosts.append(postObject)
+                print("post type:::: \(postObject.post)")
+                if postObject.post == sortedBy
+                {
+                    newPosts.append(postObject)
+                }
                 print("POST OBJECT FROM SNAPSHOT: \(postObject)")
             }
             
             self.posts = newPosts
-            
             self.tableView.reloadData()
             
         }) { (error:Error) in
@@ -114,15 +117,17 @@ class PostsTableViewController: UITableViewController
 
     }
     
-    func sortPosts(sortBy: PostType)
+    func sortPosts(sortedByPostType: String)
     {
+      //  observeDB()
         var sortedPosts = [Post]()
         for post in self.posts
         {
-            if post.post == sortBy
+            if String(describing: post.post) == "request"
             {
                 sortedPosts.append(post)
                 print("sortedPOSTS: \(sortedPosts)")
+                print("post type\(post.post)")
             }
         }
         self.posts = sortedPosts

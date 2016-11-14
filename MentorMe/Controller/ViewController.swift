@@ -12,7 +12,7 @@ import FirebaseDatabase
 class ViewController: UIViewController
 {
     
-    let postType = PostType.offer
+    let postType = PostType.request
     var postTitle: String = ""
     var postDesc: String = ""
     var postTags: String = ""

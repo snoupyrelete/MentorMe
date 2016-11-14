@@ -22,6 +22,7 @@
 		27D594B81DD674DB00A5C3CE /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D594B71DD674DB00A5C3CE /* CategoryViewController.swift */; };
 		27D594BA1DD678E800A5C3CE /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D594B91DD678E800A5C3CE /* CategoryCell.swift */; };
 		27D594BC1DD9305F00A5C3CE /* SortCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D594BB1DD9305F00A5C3CE /* SortCell.swift */; };
+		27D594BE1DDA2F1E00A5C3CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D594BD1DDA2F1E00A5C3CE /* LoginViewController.swift */; };
 		72E716BF9BAD7BA4E131E34B /* Pods_MentorMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B025F93F1FA84A36793E9B /* Pods_MentorMe.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		27D594B71DD674DB00A5C3CE /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryViewController.swift; path = Controller/CategoryViewController.swift; sourceTree = "<group>"; };
 		27D594B91DD678E800A5C3CE /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		27D594BB1DD9305F00A5C3CE /* SortCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortCell.swift; sourceTree = "<group>"; };
+		27D594BD1DDA2F1E00A5C3CE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controller/LoginViewController.swift; sourceTree = "<group>"; };
 		4D0ADDD511F4D28787030B17 /* Pods-MentorMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentorMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MentorMe/Pods-MentorMe.debug.xcconfig"; sourceTree = "<group>"; };
 		88B025F93F1FA84A36793E9B /* Pods_MentorMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MentorMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		900C7364CB3B1C09C59BD3A0 /* Pods-MentorMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentorMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-MentorMe/Pods-MentorMe.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				27D594AC1DD4146D00A5C3CE /* PostsTableViewController.swift */,
 				27D594B11DD4E92D00A5C3CE /* ProfileViewController.swift */,
 				27D594B71DD674DB00A5C3CE /* CategoryViewController.swift */,
+				27D594BD1DDA2F1E00A5C3CE /* LoginViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -169,7 +172,13 @@
 				TargetAttributes = {
 					276B2FB21DCBA81200CC1F8B = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = LL5D6P6X3W;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -258,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27D594BE1DDA2F1E00A5C3CE /* LoginViewController.swift in Sources */,
 				27D594B81DD674DB00A5C3CE /* CategoryViewController.swift in Sources */,
 				271F9D121DD2DF4F009188E5 /* User.swift in Sources */,
 				27D594BC1DD9305F00A5C3CE /* SortCell.swift in Sources */,
@@ -390,6 +400,8 @@
 			baseConfigurationReference = 4D0ADDD511F4D28787030B17 /* Pods-MentorMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MentorMe/MentorMe.entitlements;
+				DEVELOPMENT_TEAM = LL5D6P6X3W;
 				INFOPLIST_FILE = MentorMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.MentorMe;
@@ -403,6 +415,8 @@
 			baseConfigurationReference = 900C7364CB3B1C09C59BD3A0 /* Pods-MentorMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MentorMe/MentorMe.entitlements;
+				DEVELOPMENT_TEAM = LL5D6P6X3W;
 				INFOPLIST_FILE = MentorMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.MentorMe;

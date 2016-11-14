@@ -18,6 +18,12 @@ class ProfileViewController: UIViewController
     {
         let x = Profile()
         bioLabel.text = x.bio
-        
+        self.title = "Profile"
+        //self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(messageButtonTapped))
+    }
+    
+    func messageButtonTapped()
+    {
+        print("Message")
     }
 }

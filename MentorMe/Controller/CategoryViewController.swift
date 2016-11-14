@@ -11,10 +11,10 @@ import UIKit
 
 class CategoryViewController: UICollectionViewController
 {
-   let categories = ["Browse All", "Search", "Favorites", "Groups", "Browse Tech"]
+   let categories = ["Browse All", "🔎Search", "Favorites", "Groups", "Browse Tech", "Browse Advice"]
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 5
+        return categories.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -23,7 +23,7 @@ class CategoryViewController: UICollectionViewController
         
         cell.categoryLabel.text = categories[indexPath.row]
         cell.layer.cornerRadius = 30
-        cell.backgroundColor = UIColor.darkGray
+        cell.backgroundColor = UIColor.cyan
         return cell
     }
 

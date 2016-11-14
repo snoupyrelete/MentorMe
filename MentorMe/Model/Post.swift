@@ -45,7 +45,11 @@ class Post
         
         
        // self.post = postDict["post"]
-        self.post = .offer
+        //let x = PostType(fromString: (postDict["post"] as! NSString))
+        let aa = postDict["postType"] as! String
+        print("string descin dict post: \(aa)")
+        
+        self.post = PostType(fromString: postDict["postType"] as! String)
         self.title = postDict["title"] as! String
         self.description = postDict["description"] as? String
         self.user = postDict["user"] as! String
