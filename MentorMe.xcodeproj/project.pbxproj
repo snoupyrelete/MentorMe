@@ -176,7 +176,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -400,7 +400,6 @@
 			baseConfigurationReference = 4D0ADDD511F4D28787030B17 /* Pods-MentorMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MentorMe/MentorMe.entitlements;
 				DEVELOPMENT_TEAM = LL5D6P6X3W;
 				INFOPLIST_FILE = MentorMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -415,7 +414,6 @@
 			baseConfigurationReference = 900C7364CB3B1C09C59BD3A0 /* Pods-MentorMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MentorMe/MentorMe.entitlements;
 				DEVELOPMENT_TEAM = LL5D6P6X3W;
 				INFOPLIST_FILE = MentorMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
