@@ -8,12 +8,37 @@
 
 import Foundation
 import UIKit
+import Firebase
+import FirebaseAuthUI
+import FirebaseGoogleAuthUI
+import FirebaseFacebookAuthUI
 
-class ProfileViewController: UIViewController
+class ProfileViewController: UIViewController, FIRAuthUIDelegate
 {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var bioLabel: UILabel!
     
+    @IBAction func loginButtonPressed(_ sender: AnyObject)
+    {
+        let authUI = FIRAuthUI.init(auth: FIRAuth.auth()!)
+        let options = FIRApp.defaultApp()?.options
+        let clientId = options?.clientID
+        authUI?.delegate = self
+        authUI?.providers = [FIRGoogleAuthUI(clientID: clientId!)]
+        let authViewController = authUI?.authViewController();
+        self.present(authViewController!, animated: true, completion: nil)
+    }
+    
+    
+    func authUI(_ authUI: FIRAuthUI, didSignInWith user: FIRUser?, error: Error?)
+    {
+        //usernameLabel.text = String(describing: user)
+        if let username = FIRAuth.auth()?.currentUser?.displayName
+            {
+                usernameLabel.text = String(username)
+            }
+    }
+
     override func viewDidLoad()
     {
         let x = Profile()

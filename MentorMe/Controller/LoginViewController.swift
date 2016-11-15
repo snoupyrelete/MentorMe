@@ -8,8 +8,11 @@
 
 import Foundation
 import UIKit
-import FirebaseAuth
+
 import Firebase
+import FirebaseAuthUI
+import FirebaseGoogleAuthUI
+import FirebaseFacebookAuthUI
 
 class LoginViewController: UIViewController
 {
@@ -73,6 +76,7 @@ class LoginViewController: UIViewController
             })
         }
     }
+    
     override func viewDidLoad()
     {
         if let user = FIRAuth.auth()?.currentUser
