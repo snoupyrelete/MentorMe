@@ -33,7 +33,7 @@ class PostsTableViewController: UITableViewController
     }
 
     
-    lazy var baseDatabaseRef: FIRDatabaseReference! = FIRDatabase.database().reference().child("post-items")
+    var baseDatabaseRef: FIRDatabaseReference! = FIRDatabase.database().reference().child("post-items")
     var posts = [Post]()
     
     var categoryFilter: String = "General"

@@ -17,6 +17,7 @@ class ProfileViewController: UIViewController, FIRAuthUIDelegate
 {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var bioLabel: UILabel!
+    @IBOutlet weak var userImage: UIImageView!
     
     @IBAction func loginButtonPressed(_ sender: AnyObject)
     {

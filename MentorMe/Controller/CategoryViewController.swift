@@ -11,7 +11,7 @@ import UIKit
 
 class CategoryViewController: UICollectionViewController
 {
-   let categories = ["Browse All", "🔎Search", "Favorites", "Groups", "Browse Tech", "Browse Advice"]
+   let categories = ["Browse All", "Groups", "🔎Search", "Favorites",  "Browse Tech", "Browse Advice", "","","","","","","","","","",""]
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return categories.count
@@ -22,7 +22,7 @@ class CategoryViewController: UICollectionViewController
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
         
         cell.categoryLabel.text = categories[indexPath.row]
-        cell.layer.cornerRadius = 30
+        cell.layer.cornerRadius = 20
         cell.backgroundColor = UIColor.cyan
         return cell
     }
