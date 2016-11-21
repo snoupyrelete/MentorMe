@@ -6,10 +6,11 @@ target 'MentorMe' do
   use_frameworks!
 
   # Pods for MentorMe
-    pod 'Firebase'
-    pod 'Firebase/Auth'
-    pod 'Firebase/Database’
-    pod ‘FirebaseUI’
+pod 'Firebase'
+pod 'Firebase/Auth'
+pod 'Firebase/Database’
 
+pod 'FirebaseUI'
+pod ‘GoogleSignIn’
 
 end

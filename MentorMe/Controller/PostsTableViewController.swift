@@ -134,5 +134,10 @@ class PostsTableViewController: UITableViewController
         self.tableView.reloadData()
         //return sortedPosts
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        
+    }
 
 }
