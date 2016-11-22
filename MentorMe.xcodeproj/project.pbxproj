@@ -117,9 +117,9 @@
 			isa = PBXGroup;
 			children = (
 				276B2FB81DCBA81200CC1F8B /* ViewController.swift */,
-				27D594AC1DD4146D00A5C3CE /* PostsTableViewController.swift */,
 				27D594B11DD4E92D00A5C3CE /* ProfileViewController.swift */,
 				27D594B71DD674DB00A5C3CE /* CategoryViewController.swift */,
+				27D594AC1DD4146D00A5C3CE /* PostsTableViewController.swift */,
 				27D594C01DDBC7D400A5C3CE /* PostDetailViewController.swift */,
 			);
 			name = Controller;

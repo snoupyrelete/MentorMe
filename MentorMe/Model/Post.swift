@@ -58,7 +58,7 @@ class Post
         self.category = postDict["category"] as! String
         self.tags = postDict["tags"] as? String
     }
-        
+    //tags not being downloaded properly possibly due to it being as a snapshot?
 
     
     func toString() -> String

@@ -111,7 +111,7 @@
         <scene sceneID="vDU-Oi-znq">
             <objects>
                 <collectionViewController id="a8y-bq-JAV" customClass="CategoryViewController" customModule="MentorMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="tMt-v2-2yw">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="tMt-v2-2yw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -206,7 +206,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.85262101889999997" green="0.42218321559999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <segue destination="4H4-VK-7Gr" kind="push" id="K5O-V4-dDY"/>
+                                    <segue destination="4H4-VK-7Gr" kind="push" identifier="toDetailPost" id="K5O-V4-dDY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -361,7 +361,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xWL-mx-Tgh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="POST" selectedImage="google.png" id="bLg-iG-FYu"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NDB-tu-BXP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="NDB-tu-BXP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -380,7 +380,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iUj-pI-zEH" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" selectedImage="google.png" id="rb3-Wf-J0V"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zAm-Rg-jdU">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="zAm-Rg-jdU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -399,7 +399,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yEW-3s-l3P" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Messages" selectedImage="google.png" id="oTb-UO-Fo3"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sLw-Jj-t7H">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="sLw-Jj-t7H">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -483,6 +483,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="descriptionText" destination="nRs-ia-5Ef" id="VvS-xU-jRp"/>
+                        <outlet property="titleText" destination="Cac-jV-OA0" id="inH-Sg-whJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="McP-24-lWP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -495,7 +496,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JxC-Ud-Nx8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="FEED" selectedImage="google.png" id="3Ha-xn-0TW"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FUc-sf-qT5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="FUc-sf-qT5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

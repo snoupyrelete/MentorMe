@@ -137,7 +137,18 @@ class PostsTableViewController: UITableViewController
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        
+        if segue.identifier == "toDetailPost"
+        {
+            print ("seg id is toArticle")
+            if let indexPath = self.tableView.indexPathForSelectedRow
+            {
+                let post = posts[(indexPath as NSIndexPath).row]
+                if let destination = segue.destination as? PostDetailViewController
+                {
+                    destination.post = post
+                }
+            }
+        }
     }
 
 }
